@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+        CRUD JavaScript
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" id="Name" onkeypress="return (event.charCode > 64 && 
+                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" 
+                        placeholder="Full Name" required>
+                    </div>
+                    <div>
+                        <label>surname</label>
+                        <input type="text" name="surname" id="surname" onkeypress="return (event.charCode > 64 && 
+                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" 
+                        placeholder="surname">
+                    </div>
+                    <div>
+                        <label>phone</label>
+                        <input type="text" id="phone" value="" onkeypress="return isphone(event)" placeholder="phone">
+                    </div>
+                    <div>
+                        <label for="gender">gender</label>
+                        <input type="radio" name="gender" class="gender" id="male" value="Male" required>Male
+                        <input type="radio" name="gender" class="gender" id="female" value="female">Female
+                        <input type="radio" name="gender" class="gender" id="others" value="others">others
+                    </div>
+                    <div>
+                        <label for="hobby">choose a hobby</label>
+                        <select name="hobby" id="hobby">
+                            <option value=""></option>
+                            <option value="music">music</option>
+                            <option value="football">football</option>
+                            <option value="movies">movies</option>
+                            <option value="reading">reading</option>
+                         </select>
+                    </div>
+                    <div  class="form-action-button">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <div class="table-scroll">
+                <table class="list" id="employeeList">
+                    <thead> 
+                        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+                        <tr>
+                            <th>Name</th>
+                            <th>surname</th>
+                            <th>phone</th>
+                            <th>gender</th>
+                            <th>hobby</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script src="app.js"></script>
+</body>
+</html>
