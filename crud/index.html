@@ -10,6 +10,7 @@
 
 <body>
     <table>
+        <th scope="">
         <tr>
             <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
@@ -57,12 +58,12 @@
                         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 
                         <tr>
-                            <th>Name</th>
-                            <th>surname</th>
-                            <th>phone</th>
-                            <th>gender</th>
-                            <th>hobby</th>
-                            <th>action</th>
+                            <th id="name">Name</th>
+                            <th id="surname">surname</th>
+                            <th id="phone">phone</th>
+                            <th id="gender">gender</th>
+                            <th id="hoobby">hobby</th>
+                            <th id="action">action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,6 +72,7 @@
                 </div>
             </td>
         </tr>
+        </th>
     </table>
     <script src="app.js"></script>
 </body>
