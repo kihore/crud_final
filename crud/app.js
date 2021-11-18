@@ -45,8 +45,8 @@ function resetForm() {
     document.getElementById("surname").value = "";
     document.getElementById("phone").value = "";
     var gender = document.getElementsByClassName("gender");
-    for(let index = 0; index<gender.length; index++)
-        gender[index].checked = false;
+    for(let index of gender)
+        index.checked = false;
     document.getElementById("hobby").value = "";
     selectedRow = null;
 }
